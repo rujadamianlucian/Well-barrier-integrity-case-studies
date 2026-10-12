@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "welltwin"
+version = "0.1.0"
+description = "Modular well-integrity modelling: components, barrier envelopes and degradation models"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+notebooks = ["numpy", "matplotlib", "jupyter"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["welltwin*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
